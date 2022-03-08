@@ -1,0 +1,24 @@
+{% extends '../common/layout_admin.html' %}
+
+{% block head %}
+
+{% end %}
+
+{% block sidebar %}
+<ul class="nav nav-sidebar">
+    <li id="testdata"><a href="/admin/dashboard/test1">监控数据</a></li>
+    <li id="testcase"><a href="/admin/dashboard/test2">运行状态</a></li>
+</ul>
+{% end %}
+
+{% block section %}
+    {% if op == 'test1' %}
+        {% include 'modules/dashboard/test1.html' %}
+    {% elif op == 'test2' %}
+        {% include 'modules/dashboard/test2.html' %}
+    {% end %}
+{% end %}
+
+{% block footer %}
+
+{% end %}
